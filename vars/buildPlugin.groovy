@@ -4,7 +4,7 @@
  * Simple wrapper step for building a plugin
  */
 def call(Map params = [:]) {
-  Map tasks = [failFast: failFast];
+  Map tasks = [failFast: true];
   tasks['fake'] = {
     node {
       stage("Checkout") {
