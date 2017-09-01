@@ -4,7 +4,8 @@
  * Simple wrapper step for building a plugin
  */
 def call(Map params = [:]) {
-  return {
+  Map tasks = [failFast: failFast];
+  tasks['fake'] = {
     node {
       stage("Checkout") {
         checkout scm;
@@ -14,4 +15,5 @@ def call(Map params = [:]) {
       }
     }
   }
+  return parallel(tasks)
 }
