@@ -1,0 +1,3 @@
+<p>
+    Fakes building a Jenkins plugin following a standard build/test/archive pattern. See repository description for usage.
+</p>
